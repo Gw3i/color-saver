@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
-import ColorCards from "./Components/ColorCards";
+import ColorCard from "./Components/ColorCard";
 import { nanoid } from "nanoid";
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
         {colorCodes.map((colorCode) => {
           return (
             <li key={colorCode.id}>
-              <ColorCards
+              <ColorCard
                 color={colorCode.colorCode}
                 hexText={colorCode.colorCode}
               />
