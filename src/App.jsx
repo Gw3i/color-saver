@@ -2,11 +2,11 @@ import "./App.css";
 import React, { useState } from "react";
 import ColorCard from "./Components/ColorCard";
 import { nanoid } from "nanoid";
+import AddCard from "./Components/AddCard";
 
 function App() {
-  //const [colorCodes, setColorCodes] = useState(
-
-  const colorCodes = [
+  const [inputValue, setInputValue] = useState("");
+  const [colorCodes, setColorCodes] = useState([
     {
       id: nanoid(),
       colorCode: "#fe9f8e",
@@ -31,12 +31,13 @@ function App() {
       id: nanoid(),
       colorCode: "#3d3d3d",
     },
-  ];
+  ]);
 
   console.log(colorCodes);
 
   return (
     <>
+      <AddCard />
       <ul>
         {colorCodes.map((colorCode) => {
           return (
