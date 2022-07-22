@@ -37,12 +37,18 @@ function App() {
 
   return (
     <>
-      <ColorCards color={colorCodes.colorCode} />
-      <ColorCards />
-      <ColorCards />
-      <ColorCards />
-      <ColorCards />
-      <ColorCards />
+      <ul>
+        {colorCodes.map((colorCode) => {
+          return (
+            <li key={colorCode.id}>
+              <ColorCards
+                color={colorCode.colorCode}
+                hexText={colorCode.colorCode}
+              />
+            </li>
+          );
+        })}
+      </ul>
     </>
   );
 }
