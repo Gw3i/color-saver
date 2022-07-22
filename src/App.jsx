@@ -4,7 +4,9 @@ import ColorCards from "./Components/ColorCards";
 import { nanoid } from "nanoid";
 
 function App() {
-  const [colorCodes, setColorCodes] = useState([
+  //const [colorCodes, setColorCodes] = useState(
+
+  const colorCodes = [
     {
       id: nanoid(),
       colorCode: "#fe9f8e",
@@ -17,13 +19,29 @@ function App() {
       id: nanoid(),
       colorCode: "#e36da3",
     },
-  ]);
+    {
+      id: nanoid(),
+      colorCode: "#35bcc3",
+    },
+    {
+      id: nanoid(),
+      colorCode: "#a44eca",
+    },
+    {
+      id: nanoid(),
+      colorCode: "#3d3d3d",
+    },
+  ];
 
   console.log(colorCodes);
 
   return (
     <>
-    
+      <ColorCards color={colorCodes.colorCode} />
+      <ColorCards />
+      <ColorCards />
+      <ColorCards />
+      <ColorCards />
       <ColorCards />
     </>
   );
