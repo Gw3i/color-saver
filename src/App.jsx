@@ -41,10 +41,7 @@ function App() {
         {colorCodes.map((colorCode) => {
           return (
             <li key={colorCode.id}>
-              <ColorCard
-                color={colorCode.colorCode}
-                hexText={colorCode.colorCode}
-              />
+              <ColorCard color={colorCode.colorCode} />
             </li>
           );
         })}
