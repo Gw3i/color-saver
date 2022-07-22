@@ -5,7 +5,6 @@ import { nanoid } from "nanoid";
 import AddCard from "./Components/AddCard";
 
 function App() {
-  const [inputValue, setInputValue] = useState("");
   const [colorCodes, setColorCodes] = useState([
     {
       id: nanoid(),
@@ -15,29 +14,15 @@ function App() {
       id: nanoid(),
       colorCode: "#212b36",
     },
-    {
-      id: nanoid(),
-      colorCode: "#e36da3",
-    },
-    {
-      id: nanoid(),
-      colorCode: "#35bcc3",
-    },
-    {
-      id: nanoid(),
-      colorCode: "#a44eca",
-    },
-    {
-      id: nanoid(),
-      colorCode: "#3d3d3d",
-    },
   ]);
 
-  console.log(colorCodes);
+  function handleColorCode(colorCode) {
+    setColorCodes([...colorCodes, { id: nanoid(), colorCode }]);
+  }
 
   return (
     <>
-      <AddCard />
+      <AddCard onColorCode={handleColorCode} />
       <ul>
         {colorCodes.map((colorCode) => {
           return (
