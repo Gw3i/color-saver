@@ -37,6 +37,7 @@ function App() {
 
   return (
     <>
+      <h1>Color-Saver App</h1>
       <AddCard />
       <ul>
         {colorCodes.map((colorCode) => {

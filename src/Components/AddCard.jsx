@@ -5,7 +5,7 @@ export default function AddCard() {
     <div className="formWrapper">
       <form
         onSubmit={(event) => {
-          event.preventDefault;
+          event.preventDefault();
         }}
       >
         <label htmlFor="inputColor">
