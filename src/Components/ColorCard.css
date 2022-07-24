@@ -30,12 +30,16 @@
   position: absolute;
   right: 8px;
   top: 8.5px;
-  background: transparent;
-  border: 1px solid white;
-  padding: 4px 8px;
-  border-radius: 50%;
+  border: none;
+  background: none;
 }
 
-.delete-button:hover {
-  background-color: white;
+ion-icon {
+  font-size: 30px;
+  color: white;
 }
+/* 
+ion-icon:hover {
+  background-color: white;
+  color: black;
+} */

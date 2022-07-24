@@ -23,13 +23,20 @@ export default function ColorCard({
       <button
         className="delete-button"
         onClick={() => {
-          console.log(colorCode.id);
           setColorCodes(
             colorCodes.filter((listItem) => listItem.id !== colorCode.id)
           );
         }}
       >
-        X
+        <ion-icon
+          name="close-circle-outline"
+          onMouseOver={(event) => {
+            event.target.name = "close-circle";
+          }}
+          onMouseOut={(event) => {
+            event.target.name = "close-circle-outline";
+          }}
+        ></ion-icon>
       </button>
     </div>
   );
