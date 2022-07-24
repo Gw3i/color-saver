@@ -1,6 +1,11 @@
 import "./ColorCard.css";
 
-export default function ColorCard({ color }) {
+export default function ColorCard({
+  color,
+  setColorCodes,
+  colorCodes,
+  colorCode,
+}) {
   return (
     <div className="color-card" style={{ backgroundColor: color }}>
       <button
@@ -14,6 +19,17 @@ export default function ColorCard({ color }) {
         }}
       >
         {color}
+      </button>
+      <button
+        className="delete-button"
+        onClick={() => {
+          console.log(colorCode.id);
+          setColorCodes(
+            colorCodes.filter((listItem) => listItem.id !== colorCode.id)
+          );
+        }}
+      >
+        X
       </button>
     </div>
   );

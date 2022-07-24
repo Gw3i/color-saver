@@ -27,7 +27,12 @@ function App() {
         {colorCodes.map((colorCode) => {
           return (
             <li key={colorCode.id}>
-              <ColorCard color={colorCode.colorCode} />
+              <ColorCard
+                color={colorCode.colorCode}
+                colorCodes={colorCodes}
+                colorCode={colorCode}
+                setColorCodes={setColorCodes}
+              />
             </li>
           );
         })}
